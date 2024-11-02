@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="images/Synk IN LOGO.png" alt="" class="logo"> -->
+
+        <div class="content">
+
+            <p>Website is Under Maintence</p>
+            <h1>We're <span>Launching</span> Soon</h1>
+            <div class="launch-time">
+
+                <div>
+                    <p id="days">00</p>
+                    <span>days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>seconds</span>
+                </div>
+            </div>
+            <button type="submit">Learn More <img src="images/triangle.png" alt=""></button>
+        </div>
+        <img src="images/rocket.png" alt="" class="rocket">
+
+
+
+    </div>
+
+    <script>
+        var countdown=new Date("January 20,2025 00:00:00").getTime();
+        var x=setInterval(function(){
+            var now=new Date().getTime();
+            var distance=countdown-now;
+
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((distance%(1000*60))/(1000));
+            document.getElementById("days").innerHTML=days;
+            document.getElementById("hours").innerHTML=hours;
+            document.getElementById("minutes").innerHTML=minutes;
+            document.getElementById("seconds").innerHTML=seconds;
+
+        },1000);
+
+
+    </script>
+</body>
+</html>
